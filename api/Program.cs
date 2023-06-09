@@ -36,6 +36,18 @@ builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
 builder.Services.AddScoped<RestaurantService>();
 builder.Services.AddScoped<MenuService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+
+        policy.WithOrigins("*");
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,6 +57,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 //}
 
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
