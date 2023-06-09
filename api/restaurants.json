@@ -1,0 +1,122 @@
+﻿[
+  {
+    "id": 1,
+    "name": "The Factory",
+    "reaction": "🏭",
+    "location": {
+      "latitude": 59.404199158624046,
+      "longitude": 17.95500317874992
+    },
+    "source": "https://ericsson.foodbycoor.se/the-factory/restaurangen/restaurangens-meny"
+  },
+  {
+    "id": 2,
+    "name": "Ericofood",
+    "reaction": "🍕",
+    "location": {
+      "latitude": 59.40499138661447,
+      "longitude": 17.953391128348677
+    },
+    "source": "https://ericsson.foodbycoor.se/ericofood/restaurangen/restaurangens-meny"
+  },
+  {
+    "id": 3,
+    "name": "Tele2 Foodandco",
+    "reaction": "📞",
+    "location": {
+      "latitude": 59.40379975241009,
+      "longitude": 17.95651539313844
+    },
+    "source": "https://www.foodandco.se/modules/MenuRss/MenuRss/CurrentWeek?costNumber=6410&language=sv"
+  },
+  {
+    "id": 4,
+    "name": "Tastory",
+    "reaction": "🍔",
+    "location": {
+      "latitude": 59.4051959861563,
+      "longitude": 17.95209447036836
+    },
+    "source": "https://www.tastory.com/modules/MenuRss/MenuRss/CurrentWeek?costNumber=6209&language=sv"
+  },
+  {
+    "id": 5,
+    "name": "Upper East",
+    "reaction": "🍳",
+    "location": {
+      "latitude": 59.40639039913742,
+      "longitude": 17.955567069182226
+    },
+    "source": "https://uppereast.kvartersmenyn.se/"
+  },
+  {
+    "id": 6,
+    "name": "Provence",
+    "reaction": "⛱",
+    "location": {
+      "latitude": 59.40487231830055,
+      "longitude": 17.950068133586516
+    },
+    "source": "https://provence.kvartersmenyn.se/"
+  },
+  {
+    "id": 7,
+    "name": "Eatery Kista Gate",
+    "reaction": "🍟",
+    "location": {
+      "latitude": 59.40970291349578,
+      "longitude": 17.949576024594414
+    },
+    "source": "https://api.eatery.se/wp-json/eatery/v1/load"
+  },
+  {
+    "id": 8,
+    "name": "Eatery Kista Nod",
+    "reaction": "🥖",
+    "location": {
+      "latitude": 59.40706106507097,
+      "longitude": 17.945296236189535
+    },
+    "source": "https://api.eatery.se/wp-json/eatery/v1/load"
+  },
+  {
+    "id": 9,
+    "name": "Isas Spis",
+    "reaction": "🍖",
+    "location": {
+      "latitude": 59.40214388255143,
+      "longitude": 17.950510540768185
+    },
+    "source": "https://www.isasspis.se/"
+  },
+  {
+    "id": 10,
+    "name": "Sabis Nordic Forum",
+    "reaction": "🍾",
+    "location": {
+      "latitude": 59.40640810078154,
+      "longitude": 17.950290110307687
+    },
+    "source": "https://www.sabis.se/restauranger-cafeer/vara-publika-restauranger/restaurang-nordic-forum/"
+  },
+  {
+    "id": 11,
+    "name": "Heat",
+    "reaction": "🔥",
+    "location": {
+      "latitude": 59.400712538693476,
+      "longitude": 17.956051171164113
+    },
+    "source": "https://castit.nu/xml/posts.php?c=72&h=a800e34fa2c8f36034180c3f29eedd73&s=1134&ct=58"
+  },
+  {
+    "id": 12,
+    "name": "Kista Garden",
+    "reaction": "🌿",
+    "location": {
+      "latitude": 59.40194960258621,
+      "longitude": 17.941912683109134
+    },
+    "source": "http://www.kistagarden.se/lunch/"
+  }
+]
