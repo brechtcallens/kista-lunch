@@ -2,6 +2,7 @@
 using TheMostAmazingLunchAPI.Models;
 
 namespace TheMostAmazingLunchAPI.Data;
+
 public class LunchContext : DbContext
 {
     public LunchContext(DbContextOptions<LunchContext> options) : base(options)
@@ -19,5 +20,12 @@ public class LunchContext : DbContext
 
         modelBuilder.Entity<DayMenu>()
             .OwnsMany(dayMenu => dayMenu.MenuItems, menuItem => menuItem.HasKey("Id"));
+    }
+
+    protected override void ConfigureConventions(ModelConfigurationBuilder builder)
+    {
+        builder.Properties<DateOnly>()
+            .HaveConversion<DateOnlyConverter>()
+            .HaveColumnType("date");
     }
 }

@@ -30,12 +30,6 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
-
-builder.Services.AddScoped<RestaurantService>();
-builder.Services.AddScoped<MenuService>();
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
@@ -48,18 +42,28 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddScoped<RestaurantService>();
+builder.Services.AddScoped<MenuService>();
+
+//if (builder.Environment.IsDevelopment())
+//{
+//    builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
+//}
+//else
+//{
+var connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+builder.Services.AddSqlServer<LunchContext>(connectionString);
+//}
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
 app.UseSwagger();
 app.UseSwaggerUI();
-//}
 
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.CreateDbIfNotExists();
+
 app.Run();

@@ -1,6 +1,5 @@
 ﻿[
   {
-    "id": 1,
     "name": "The Factory",
     "reaction": "🏭",
     "location": {
@@ -10,7 +9,6 @@
     "source": "https://ericsson.foodbycoor.se/the-factory/restaurangen/restaurangens-meny"
   },
   {
-    "id": 2,
     "name": "Ericofood",
     "reaction": "🍕",
     "location": {
@@ -20,7 +18,6 @@
     "source": "https://ericsson.foodbycoor.se/ericofood/restaurangen/restaurangens-meny"
   },
   {
-    "id": 3,
     "name": "Tele2 Foodandco",
     "reaction": "📞",
     "location": {
@@ -30,7 +27,6 @@
     "source": "https://www.foodandco.se/modules/MenuRss/MenuRss/CurrentWeek?costNumber=6410&language=sv"
   },
   {
-    "id": 4,
     "name": "Tastory",
     "reaction": "🍔",
     "location": {
@@ -40,7 +36,6 @@
     "source": "https://www.tastory.com/modules/MenuRss/MenuRss/CurrentWeek?costNumber=6209&language=sv"
   },
   {
-    "id": 5,
     "name": "Upper East",
     "reaction": "🍳",
     "location": {
@@ -50,7 +45,6 @@
     "source": "https://uppereast.kvartersmenyn.se/"
   },
   {
-    "id": 6,
     "name": "Provence",
     "reaction": "⛱",
     "location": {
@@ -60,7 +54,6 @@
     "source": "https://provence.kvartersmenyn.se/"
   },
   {
-    "id": 7,
     "name": "Eatery Kista Gate",
     "reaction": "🍟",
     "location": {
@@ -70,7 +63,6 @@
     "source": "https://api.eatery.se/wp-json/eatery/v1/load"
   },
   {
-    "id": 8,
     "name": "Eatery Kista Nod",
     "reaction": "🥖",
     "location": {
@@ -80,7 +72,6 @@
     "source": "https://api.eatery.se/wp-json/eatery/v1/load"
   },
   {
-    "id": 9,
     "name": "Isas Spis",
     "reaction": "🍖",
     "location": {
@@ -90,7 +81,6 @@
     "source": "https://www.isasspis.se/"
   },
   {
-    "id": 10,
     "name": "Sabis Nordic Forum",
     "reaction": "🍾",
     "location": {
@@ -100,7 +90,6 @@
     "source": "https://www.sabis.se/restauranger-cafeer/vara-publika-restauranger/restaurang-nordic-forum/"
   },
   {
-    "id": 11,
     "name": "Heat",
     "reaction": "🔥",
     "location": {
@@ -110,7 +99,6 @@
     "source": "https://castit.nu/xml/posts.php?c=72&h=a800e34fa2c8f36034180c3f29eedd73&s=1134&ct=58"
   },
   {
-    "id": 12,
     "name": "Kista Garden",
     "reaction": "🌿",
     "location": {
