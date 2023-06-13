@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release ./api
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/kista-lunch-api
+        run: dotnet publish -c Release ./api -o ${{env.DOTNET_ROOT}}/kista-lunch-api
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
