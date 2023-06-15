@@ -45,15 +45,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<RestaurantService>();
 builder.Services.AddScoped<MenuService>();
 
-//if (builder.Environment.IsDevelopment())
-//{
-//    builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
-//}
-//else
-//{
-var connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
-builder.Services.AddSqlServer<LunchContext>(connectionString);
-//}
+// TODO: Use an actual database.
+builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
 
 var app = builder.Build();
 
