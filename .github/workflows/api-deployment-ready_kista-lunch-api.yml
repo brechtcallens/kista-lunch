@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb7e41b4d3454a3c8735bffc0d1eb499 }}/ecalbre/lunch_api:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb7e41b4d3454a3c8735bffc0d1eb499 }}/lunch_api:${{ github.sha }}
         context: ./api
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'kista-lunch-api'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_bd1b86c45d084a128e09b29523811361 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb7e41b4d3454a3c8735bffc0d1eb499 }}/ecalbre/lunch_api:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb7e41b4d3454a3c8735bffc0d1eb499 }}/lunch_api:${{ github.sha }}'
