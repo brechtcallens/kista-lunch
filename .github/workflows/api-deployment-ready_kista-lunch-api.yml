@@ -6,7 +6,7 @@ name: Build and deploy container app to Azure Web App - kista-lunch-api
 on:
   push:
     branches:
-      - api-deployment-ready
+      - main
   workflow_dispatch:
 
 jobs:
