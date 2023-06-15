@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb7e41b4d3454a3c8735bffc0d1eb499 }}/ecalbre/lunch_api:${{ github.sha }}
-        file: ./Dockerfile
+        context: ./api
 
   deploy:
     runs-on: ubuntu-latest
