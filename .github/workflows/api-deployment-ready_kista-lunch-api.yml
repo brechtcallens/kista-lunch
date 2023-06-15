@@ -9,6 +9,10 @@ on:
       - api-deployment-ready
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ./api
+
 jobs:
   build:
     runs-on: 'ubuntu-latest'
