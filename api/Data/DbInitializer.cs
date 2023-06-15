@@ -20,7 +20,7 @@ public static class DbInitializer
         // Compare JSON restaurants with contents of database and add/update respectively.
         foreach (var restaurant in restaurants)
         {
-            if (context.Restaurants.Any(dbRestaurant => dbRestaurant.Id == restaurant.Id))
+            if (context.Restaurants.Any(dbRestaurant => dbRestaurant.Name == restaurant.Name))
             {
                 context.Restaurants.Update(restaurant);
             }

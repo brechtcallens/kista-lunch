@@ -30,23 +30,33 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+
+        policy.WithOrigins("*");
+    });
+});
 
 builder.Services.AddScoped<RestaurantService>();
 builder.Services.AddScoped<MenuService>();
 
+// TODO: Use an actual database.
+builder.Services.AddSqlite<LunchContext>("Data source=LunchData.db");
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
 app.UseSwagger();
 app.UseSwaggerUI();
-//}
 
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.CreateDbIfNotExists();
+
 app.Run();
