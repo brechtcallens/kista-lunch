@@ -9,10 +9,6 @@ on:
       - api-deployment-ready
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: ./api
-
 jobs:
   build:
     runs-on: 'ubuntu-latest'
@@ -35,7 +31,7 @@ jobs:
       with:
         push: true
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e346ed9a021f4407b054c93a0136322b }}/ecalbre/lunch_api:${{ github.sha }}
-        file: ./Dockerfile
+        context: ./api
 
   deploy:
     runs-on: ubuntu-latest
